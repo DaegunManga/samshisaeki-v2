@@ -12,6 +12,12 @@ declare global {
       REFRESH_JWT_SECRET: string;
       COOKIE_SECRET: string;
 
+      NODEMAILER_HOST: string;
+      NODEMAILER_PORT: string;
+      NODEMAILER_SECURE: 'true' | 'false';
+      NODEMAILER_AUTH_USER: string;
+      NODEMAILER_AUTH_PASS: string;
+
       // Typeorm Setting
       TYPEORM_CONNECTION: 'postgres' | 'mysql' | 'sqlite' | 'mssql';
       TYPEORM_HOST: string;
