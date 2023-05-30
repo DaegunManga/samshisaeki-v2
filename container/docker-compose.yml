@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:10
+    container_name: postgres-samshisaeki
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5500:5432'
+    volumes:
+      - ./db:/var/lib/postgresql/data
