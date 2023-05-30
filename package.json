@@ -1,0 +1,32 @@
+{
+  "name": "samshisaeki-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:DaegunManga/samshisaeki-v2.git",
+  "author": "lukekeum <lukekeum11@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package",
+    "backend": "yarn workspace backend",
+    "frontendt": "yarn workspace frontend",
+    "design": "yarn workspace design",
+    "lerna": "lerna"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "design"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "lerna": "^5.5.1",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0"
+  }
+}
