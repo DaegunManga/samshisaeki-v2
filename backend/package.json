@@ -4,11 +4,24 @@
   "main": "dist/index.js",
   "author": "lukekeum",
   "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production ts-node -r tsconfig-paths/register src/index.ts",
+    "start:dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts | pino-pretty",
+    "test": "NODE_ENV=test node -r tsconfig-paths/register scripts/setupTests.js"
+  },
   "devDependencies": {
     "@types/node": "^20.2.5",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^8.3.0",
+    "@fastify/cors": "^8.3.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "pg": "^8.11.0",
+    "typeorm": "^0.3.16"
   }
 }
