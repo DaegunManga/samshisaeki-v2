@@ -3,7 +3,7 @@ import fastifyCors, { FastifyCorsOptions } from '@fastify/cors';
 import fastifyCookie from '@fastify/cookie';
 import { CustomError, ErrorType } from './utils/errors/CustomError';
 import ResponseMessage from './utils/errors/ResponseMessage';
-import rootRoute from './routes/rootRoute';
+import rootRoute from './routes';
 
 export default class Server {
   private readonly app: FastifyInstance;
