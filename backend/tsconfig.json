@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["es2021", "dom"],
+    "types": [
+      "@types/node",
+      "./types/config",
+    ],
+    "declaration": true,
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+  }
+}
