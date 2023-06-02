@@ -1,16 +1,10 @@
-import {
-  Column,
-  Entity,
-  ManyToMany,
-  PrimaryColumn,
-  PrimaryGeneratedColumn,
-} from "typeorm";
+import { Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
 import { Food } from "./food.entity";
 
 @Entity()
 export class Nutrient {
   @PrimaryColumn()
-  id: string;
+  id: number;
 
   @Column()
   name: string;
