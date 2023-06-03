@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { Meal } from "./meal.entity";
 import { Nutrient } from "./nutrient.entity";
 
@@ -7,15 +13,17 @@ export class Food {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column()
+  @Column({ type: "varchar", length: 150 })
   name: string;
 
   @Column()
   photo: string;
 
-  @ManyToMany(() => Nutrient, (nutrient) => nutrient.foods)
+  @ManyToMany(() => Nutrient)
+  @JoinTable()
   nutrients: Nutrient[];
 
   @ManyToMany(() => Meal, (meal) => meal.foods)
+  @JoinTable()
   meals: Meal[];
 }

@@ -1,5 +1,4 @@
-import { Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
-import { Food } from "./food.entity";
+import { Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity()
 export class Nutrient {
@@ -8,7 +7,4 @@ export class Nutrient {
 
   @Column()
   name: string;
-
-  @ManyToMany(() => Food, (food) => food.nutrients)
-  foods: Food[];
 }
